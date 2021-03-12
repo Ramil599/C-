@@ -1,8 +1,57 @@
-<Project Sdk="Microsoft.NET.Sdk">
+using System;
 
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
-  </PropertyGroup>
-
-</Project>
+namespace ConsoleApp6
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введите число символов: ");
+            int SignHigh = Convert.ToInt32(Console.ReadLine());
+            for(int i=0;i< SignHigh;i++)
+            {
+                for(int j=0;j<=i;j++)
+                {
+                    Console.Write("*"); 
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine();
+            for (int i = SignHigh; i >=0 ; i--)
+            {
+                for (int j = 0; j < i; j++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine();
+            for (int i = 0; i < SignHigh; i++)
+            {
+                for (int j = SignHigh; j-1 > i; j--)
+                {
+                    Console.Write(" ");
+                }
+                for (int k = 0; k <= i; k++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine();
+            for (int i = 0; i < SignHigh; i++)
+            {
+                for (int k = 0; k < i; k++)
+                {
+                    Console.Write(" ");
+                }
+                for (int j = SignHigh; j > i; j--)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine();
+            }
+            Console.ReadKey();
+        }
+    }
+}
